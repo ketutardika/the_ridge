@@ -149,6 +149,13 @@ h6,
   color :#000!important;
 }
 
+.bg-hero-ridge{
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
 .bg-primary {
   background-color: #3274f0 !important;
 }
