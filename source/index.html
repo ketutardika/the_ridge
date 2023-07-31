@@ -25,14 +25,30 @@
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- Main Css -->
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" id="the-ridge" />
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css" id="the-ridge" />
 
     </head>
 
     <body>
-
         <!-- Navbar Start -->
-        <!-- <header id="topnav" class="">
-        </header> -->
+        <header id="topnav" class="container-fluid p-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+            <div class="col-md-3 col-xs-3">
+              <div class="nav-trigger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </div>
+          <div class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <a href="#" class="nav-link px-2 link-secondary d-none d-sm-block">
+                <img src="assets/images/villa/the-ridge-logo.png" class="logo-dark-mode" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-xs-3 text-end">
+            <button type="button" class="btn btn-ridge-primary-white display-9 text-white ms-3 book-villa">Book Villa</button>
+            <button type="button" class="btn btn-ridge-primary-white display-9 text-white ms-3 book-table">Book Table</button>
+          </div>
+        </header>
         <!--end header-->
         <!-- Navbar End -->
 
@@ -357,18 +373,42 @@
         <!-- Grid column -->
       </div>
       <!-- Grid row -->
-            </div><!--end container-fluid-->
+        </div><!--end container-fluid-->
 
         </footer><!--end footer-->
         <!-- End -->
 
+        <aside id="navigation">
+          <div class="inner">
+            <div class="nav-trigger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <ul class="menu">
+              <li> <a href="#">Home</a></li>
+              <li> <a href="#">The Villas</a></li>
+              <li> <a href="#">Services</a></li>
+              <li> <a href="#">Contact</a></li>
+            </ul>
+            <hr>
+            <p>"Welcome to our exclusive villa in Bali - Your dream destination for a perfect getaway. Immerse yourself in breathtaking views, modern amenities, and the serene beauty of the island. Book now and create unforgettable memories with your family and friends at our Bali Villa.  </p>
+          </div>
+        </aside>
         <!-- Back to top -->
         <!-- <a href="javascript:void(0)" onclick="topFunction()" id="back-to-top" class="back-to-top rounded-pill"><i class="mdi mdi-arrow-up"></i></a> -->
         <!-- Back to top -->
     
 
         <!-- javascript -->
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/feather.min.js"></script>
         <script src="assets/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+        <script type="text/javascript">
+            $('.nav-trigger').on('click', function(e){
+                $('body').toggleClass('menu-active');
+              });
+        </script>
     </body>
 </html>
