@@ -150,10 +150,10 @@ h6,
 }
 
 .bg-hero-ridge{
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+  height: 100vh!important;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+  background-position: top center!important;
 }
 
 .bg-primary {
