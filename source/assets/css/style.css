@@ -2505,6 +2505,9 @@ p {
   .feature-posts-placeholder {
     height: 80%;
   }
+  .p-5 {
+    padding: 1rem!important;
+  }
 }
 
 @media (max-width: 768px) {
