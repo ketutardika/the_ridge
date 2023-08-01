@@ -33,6 +33,16 @@ function fn() {
     activateMenu();
 }
 
+function navbarRidge() {
+    $('.nav-trigger').on('click', function(e) {
+        $('body').toggleClass('menu-active');
+    });
+}
+
+$(document).ready(function() {
+    navbarRidge();
+});
+
 //Menu
 // Toggle menu
 function toggleMenu() {

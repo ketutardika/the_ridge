@@ -25,35 +25,29 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'the_ridge' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$the_ridge_description = get_bloginfo( 'description', 'display' );
-			if ( $the_ridge_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $the_ridge_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'the_ridge' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<header id="topnav" class="container-fluid p-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+    <div class="col-md-3 col-xs-3">
+        <div class="nav-trigger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <!--Logo-->
+    <div class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <?php
+        if (has_custom_logo()) {
+            the_custom_logo();
+        } else {
+            echo '<a href="' . esc_url(home_url('/')) . '" class="nav-link px-2 link-secondary d-none d-sm-block">';
+            echo '<img src="' . get_template_directory_uri() . '/assets/images/villa/the-ridge-logo.png" class="logo-dark-mode" alt="' . get_bloginfo('name') . '">';
+            echo '</a>';
+        }
+        ?>
+    </div>
+    <!--Secondary Menu-->
+    <div class="col-md-3 col-xs-3 text-end">
+        <button type="button" class="btn btn-ridge-primary-white display-9 text-white ms-3 book-villa">Book Villa</button>
+        <button type="button" class="btn btn-ridge-primary-white display-9 text-white ms-3 book-table">Book Table</button>
+    </div>
+</header>

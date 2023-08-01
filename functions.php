@@ -47,11 +47,35 @@ function the_ridge_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__( 'Primary', 'the_ridge' ),
-		)
-	);
+	//register_nav_menus(
+		//array(
+			//'menu-1' => esc_html__( 'Primary', 'the_ridge' ),
+		//)
+	//);
+
+	// Register custom navigation menus
+	function theme_register_menus() {
+	    register_nav_menus(
+	        array(
+	            'primary-menu' => esc_html__('Primary Menu', 'theme-textdomain'),
+	            'secondary-menu' => esc_html__('Secondary Menu', 'theme-textdomain'),
+	        )
+	    );
+	}
+	add_action('init', 'theme_register_menus');
+
+	// Logo support
+	function theme_custom_logo_setup() {
+	    $defaults = array(
+	        'height'      => 50,
+	        'width'       => 150,
+	        'flex-height' => true,
+	        'flex-width'  => true,
+	        'header-text' => array('site-title', 'site-description'),
+	    );
+	    add_theme_support('custom-logo', $defaults);
+	}
+	add_action('after_setup_theme', 'theme_custom_logo_setup');
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
