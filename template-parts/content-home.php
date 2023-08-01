@@ -45,7 +45,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php 
-			if (!is_elementor_editor()) {
+			$is_elementor_editor = false;
+			if (class_exists('Elementor\Plugin')) {
+			    $is_elementor_editor = \Elementor\Plugin::$instance->editor->is_edit_mode();
+			}
+
+			if (!$is_elementor_editor) {
 			    // Display the title using your desired format
 			    the_title('<h1 class="entry-title">', '</h1>');
 			}
