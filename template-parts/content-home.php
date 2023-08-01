@@ -8,6 +8,20 @@
  */
 
 ?>
+<!-- Hero Start -->
+<section class="bg-half-170 bg-light pb-0 d-table w-100 bg-hero-ridge" style="background: url('wp-content/themes/the_ridge/source/assets/images/villa/bg_header_hero.png');">
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-12 text-center">
+                <div class="title-heading mt-4">
+                    <h1 class="display-3 text-white title-dark mb-3"> Magnificent views </h1>
+                    <h5 class="fw-medium text-white title-dark mb-3 section-heading-text"> overlooking a tropical forest <br/> above the Ayung River </h5>   
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div> <!--end container-fluid-->
+</section><!--end section-->
+<!-- Hero End -->
 
 <!-- Start -->
 <section class="p-5 mt-5">
