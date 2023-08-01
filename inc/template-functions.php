@@ -71,3 +71,14 @@ function theme_enqueue_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
+
+function hide_title_if_elementor() {
+    // Check if the page is being edited with Elementor
+    if (class_exists('Elementor\Plugin') && \Elementor\Plugin::$instance->editor->is_edit_mode()) {
+        // If Elementor is active and the page is being edited with Elementor, hide the title
+        return '';
+    }
+
+    // If not using Elementor, display the title normally
+    return '<h1 class="entry-title">' . get_the_title() . '</h1>';
+}
