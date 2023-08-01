@@ -231,3 +231,13 @@ function add_admin_bar_body_class($classes) {
     return $classes;
 }
 add_filter('body_class', 'add_admin_bar_body_class');
+
+function add_custom_class_to_secondary_menu_items($classes, $item, $args) {
+    // Check if this menu is the secondary menu
+    if ($args->theme_location === 'secondary-menu') {
+        // Add the custom class to the existing classes
+        $classes[] = 'btn btn-ridge-primary-white display-9 text-white ms-3 book-table';
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_custom_class_to_secondary_menu_items', 10, 3);
