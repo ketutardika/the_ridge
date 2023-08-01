@@ -39,7 +39,7 @@ function navbarRidge() {
     });
 }
 
-$(document).ready(function() {
+jQuery(function ($) {
     navbarRidge();
 });
 
