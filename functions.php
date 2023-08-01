@@ -173,22 +173,6 @@ function the_ridge_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'the_ridge_scripts' );
 
-// Check if Elementor is active and show admin notice if not installed
-function my_elementor_notice() {
-    if (!class_exists('Elementor\Plugin')) {
-        echo '<div class="notice notice-error"><p><strong>Your theme requires Elementor plugin to be installed and activated.</strong> Please install and activate Elementor to take full advantage of this theme.</p></div>';
-    }
-}
-add_action('admin_notices', 'my_elementor_notice');
-
-// Enqueue Elementor styles and scripts
-function my_elementor_styles_scripts() {
-    if (class_exists('Elementor\Plugin')) {
-        wp_enqueue_style('elementor-style', get_template_directory_uri() . '/elementor.css', array(), '1.0');
-    }
-}
-add_action('wp_enqueue_scripts', 'my_elementor_styles_scripts');
-
 /**
  * Implement the Custom Header feature.
  */

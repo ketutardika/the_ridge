@@ -11,6 +11,28 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
+function the_ridge_check_dependencies() {
+    // Check if Elementor plugin is active
+    if (!class_exists('Elementor')) {
+        ?>
+        <div class="notice notice-error">
+            <p><strong>The Ridge theme requires Elementor plugin to be installed and activated.</strong></p>
+        </div>
+        <?php
+    }
+
+    // Check if The Ridge Core plugin is active
+    if (!is_plugin_active('the-ridge-core/the-ridge-core.php')) {
+        ?>
+        <div class="notice notice-error">
+            <p><strong>The Ridge theme requires The Ridge Core plugin to be installed and activated.</strong></p>
+        </div>
+        <?php
+    }
+}
+
+add_action('admin_notices', 'the_ridge_check_dependencies');
+
 function the_ridge_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
