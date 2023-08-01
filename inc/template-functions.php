@@ -13,7 +13,7 @@
  */
 function the_ridge_check_dependencies() {
     // Check if Elementor plugin is active
-    if (!class_exists('Elementor')) {
+    if (!is_plugin_active('elementor/elementor.php')) {
         ?>
         <div class="notice notice-error">
             <p><strong>The Ridge theme requires Elementor plugin to be installed and activated.</strong></p>
