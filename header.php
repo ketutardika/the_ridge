@@ -52,13 +52,13 @@
 	    if (has_nav_menu('secondary-menu')) {
 	        // Display the secondary menu
 	        wp_nav_menu(array(
-	            'theme_location' => 'secondary-menu',
-	            'container'      => 'div',
-	            'container_class' => 'secondary-menu-wrapper',
-	            'menu_class'     => 'btn btn-ridge-primary-white display-9 text-white ms-3 book-villa',
-	            'items_wrap'     => '%3$s',
-	            'fallback_cb'    => false, // Do not display a fallback menu if the secondary menu is not assigned
-	        ));
+            'theme_location' => 'secondary-menu',
+            'container'      => 'div',
+            'container_class' => 'secondary-menu-wrapper',
+            'menu_class'     => 'secondary-menu d-flex',
+            'items_wrap'     => '%3$s', // Exclude the default ul li tags
+            'fallback_cb'    => false, // Do not display a fallback menu if the secondary menu is not assigned
+        ));
 	    } else {
 	        // Fallback content if the secondary menu is not registered
 	        echo '<button type="button" class="btn btn-ridge-primary-white display-9 text-white ms-3 book-villa">Book Villa</button>';
