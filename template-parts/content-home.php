@@ -45,7 +45,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php 
-			echo hide_title_if_elementor();
+			
 		?>
 	</header><!-- .entry-header -->
 
