@@ -1,9 +1,7 @@
 .hidden-block{
   display: none!important;
 }
-.custom-logo-link, .secondary-menu-wrapper{
-  display: none!important;
-}
+
 #topnav{
 	position: absolute!important;
 }
@@ -175,6 +173,9 @@
     width: 500px;
     overflow-y: scroll;
     display: block;
+}
+.custom-logo-link, .secondary-menu-wrapper{
+  display: none!important;
 }
 }
 
