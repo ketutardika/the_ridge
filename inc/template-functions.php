@@ -72,13 +72,22 @@ function theme_enqueue_scripts() {
 
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 
-function hide_title_if_elementor() {
-    // Check if the page is being edited with Elementor
-    if (class_exists('Elementor\Plugin') && \Elementor\Plugin::$instance->editor->is_edit_mode()) {
-        // If Elementor is active and the page is being edited with Elementor, hide the title
-        return '';
+if ( ! function_exists( 'the_ridge_check_hide_title' ) ) {
+    /**
+     * Check hide title.
+     *
+     * @param bool $val default value.
+     *
+     * @return bool
+     */
+    function the_ridge_check_hide_title( $val ) {
+        if ( defined( 'ELEMENTOR_VERSION' ) ) {
+            $current_doc = Elementor\Plugin::instance()->documents->get( get_the_ID() );
+            if ( $current_doc && 'yes' === $current_doc->get_settings( 'hide_title' ) ) {
+                $val = false;
+            }
+        }
+        return $val;
     }
-
-    // If not using Elementor, display the title normally
-    return '<h1 class="entry-title">' . get_the_title() . '</h1>';
 }
+add_filter( 'the_ridge_page_title', 'the_ridge_check_hide_title' );

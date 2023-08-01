@@ -10,13 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<?php if ( apply_filters( 'the_ridge_page_title', true ) ) : ?>
+		<header class="page-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header>
+	<?php endif; ?>
 
 	<?php the_ridge_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="main-content">
 		<?php
 		the_content();
 
