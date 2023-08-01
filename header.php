@@ -56,6 +56,7 @@
 	            'container'      => 'div',
 	            'container_class' => 'secondary-menu-wrapper',
 	            'menu_class'     => 'btn btn-ridge-primary-white display-9 text-white ms-3 book-villa',
+	            'items_wrap'     => '%3$s',
 	            'fallback_cb'    => false, // Do not display a fallback menu if the secondary menu is not assigned
 	        ));
 	    } else {
