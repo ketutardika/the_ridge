@@ -162,6 +162,14 @@
   transition: transform .4s, -webkit-transform .4s;
 }
 
+@media (max-width: 991px){
+#topnav {
+    background-color: transparent;
+    box-shadow: none;
+    min-height: unset;
+}
+}
+
 @media screen and (max-width: 768px){
 #navigation {
     width: 500px;
