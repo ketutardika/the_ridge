@@ -18,7 +18,7 @@
 
 	<?php the_ridge_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="main-content">
 		<?php
 		the_content();
 
