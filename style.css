@@ -973,3 +973,37 @@ textarea {
 .admin-bar-showing #navigation{
     padding-top: 50px;
 }
+/* Style the Secondary Menu wrapper */
+.secondary-menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Remove the list-style and padding from the menu items */
+.secondary-menu li {
+  list-style: none;
+  padding: 0;
+}
+
+/* Add spacing between menu items */
+.secondary-menu li + li {
+  margin-left: 10px; /* Adjust as needed */
+}
+
+/* Style the menu items (buttons) */
+.secondary-menu li.btn {
+  display: inline-block;
+}
+
+/* Optional: Style the link inside the menu items */
+.secondary-menu li.btn a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px 15px;
+}
+
+/* Optional: Style the link on hover */
+.secondary-menu li.btn a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
