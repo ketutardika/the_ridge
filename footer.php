@@ -116,40 +116,11 @@
         </div>
         <!-- Grid column -->
       </div>
-      <div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'the_ridge' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'the_ridge' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'the_ridge' ), 'the_ridge', '<a href="https://theridgebali.com">Ardika & Sukraada</a>' );
-				?>
-		</div><!-- .site-info -->
+      <div class="site-info text-center"></div><!-- .site-info -->
       <!-- Grid row -->
     </div><!--end container-fluid-->
 </footer><!--end footer-->
 <!-- End -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'the_ridge' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'the_ridge' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'the_ridge' ), 'the_ridge', '<a href="https://theridgebali.com">Ardika & Sukraada</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
