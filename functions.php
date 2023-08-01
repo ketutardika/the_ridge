@@ -222,3 +222,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+// Add a filter to the body_class
+function add_admin_bar_body_class($classes) {
+    if (is_admin_bar_showing()) {
+        $classes[] = 'admin-bar-showing';
+    }
+    return $classes;
+}
+add_filter('body_class', 'add_admin_bar_body_class');
