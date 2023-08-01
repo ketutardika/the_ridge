@@ -47,8 +47,23 @@
     </div>
     <!--Secondary Menu-->
     <div class="col-md-3 col-xs-3 text-end">
-        <button type="button" class="btn btn-ridge-primary-white display-9 text-white ms-3 book-villa">Book Villa</button>
-        <button type="button" class="btn btn-ridge-primary-white display-9 text-white ms-3 book-table">Book Table</button>
+        <?php
+	    // Check if the secondary menu is registered
+	    if (has_nav_menu('secondary-menu')) {
+	        // Display the secondary menu
+	        wp_nav_menu(array(
+	            'theme_location' => 'secondary-menu',
+	            'container'      => 'div',
+	            'container_class' => 'secondary-menu-wrapper',
+	            'menu_class'     => 'secondary-menu',
+	            'fallback_cb'    => false, // Do not display a fallback menu if the secondary menu is not assigned
+	        ));
+	    } else {
+	        // Fallback content if the secondary menu is not registered
+	        echo '<button type="button" class="btn btn-ridge-primary-white display-9 text-white ms-3 book-villa">Book Villa</button>';
+	        echo '<button type="button" class="btn btn-ridge-primary-white display-9 text-white ms-3 book-table">Book Table</button>';
+	    }
+	    ?>
     </div>
 </header>
 
