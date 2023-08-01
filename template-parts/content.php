@@ -9,6 +9,24 @@
 
 ?>
 
+<!-- Start -->
+<section class="p-5 mt-5">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="text-center mb-4 pb-2">
+                    <h6 class="display-9 section-heading-text text-color-primary">THE COLLECTION</h6>
+                    <h4 class="display-5 mt-2 mb-3 text-color-secondary">Dolore Magna Aliqua</h4>
+                    <p class="display-8 mx-auto mb-0 text-color-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <div class="mt-4">
+                        <a href="javascript:void(0)" class="btn btn-ridge-primary display-9 ">FIND OUT MORE</a>
+                    </div>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div>
+</section>
+<!-- End Section -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
