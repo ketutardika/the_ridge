@@ -53,7 +53,7 @@
 </header>
 
 <!-- Hero Start -->
-<section class="bg-half-170 bg-light pb-0 d-table w-100 bg-hero-ridge" style="background: url('source/wp-content/themes/the_ridge/source/assets/images/villa/bg_header_hero.png');">
+<section class="bg-half-170 bg-light pb-0 d-table w-100 bg-hero-ridge" style="background: url('wp-content/themes/the_ridge/source/assets/images/villa/bg_header_hero.png');">
     <div class="container-fluid">
         <div class="row justify-content-center mt-5">
             <div class="col-lg-12 text-center">
