@@ -236,7 +236,9 @@ function load_elementor_footer() {
         $footer_template_id = 126; // Replace with your actual footer template ID
         
         // Load the Elementor footer content
+        echo "<footer  id='colophon' class='site-footer p-5 footer bg-light-yellow-secondary'>";
         echo \Elementor\Plugin::instance()->frontend->get_builder_content($footer_template_id);
+        echo "</footer'>";
     }
 }
 
