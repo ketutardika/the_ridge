@@ -228,3 +228,17 @@ function add_custom_class_to_secondary_menu_items($classes, $item, $args) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_custom_class_to_secondary_menu_items', 10, 3);
+
+function load_elementor_footer() {
+    // Check if Elementor plugin is active
+    if (class_exists('Elementor\Plugin')) {
+        // Get the footer template ID created in Elementor
+        $footer_template_id = 123; // Replace with your actual footer template ID
+        
+        // Load the Elementor footer content
+        echo \Elementor\Plugin::instance()->frontend->get_builder_content($footer_template_id);
+    }
+}
+
+// Hook the function to where you want to display the footer (e.g., wp_footer)
+add_action('wp_footer', 'load_elementor_footer');
