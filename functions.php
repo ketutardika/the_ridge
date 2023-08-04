@@ -173,6 +173,9 @@ function the_ridge_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'the_ridge_scripts' );
 
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'blog-post-grid', 416, 550, true ); // Hard Crop Mode
+
 /**
  * Implement the Custom Header feature.
  */
