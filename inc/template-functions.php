@@ -11,6 +11,8 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
+add_image_size( 'blog-post-grid', 416, 550, true ); // Hard Crop Mode
+
 function the_ridge_check_dependencies() {
     // Check if Elementor plugin is active
     if (!is_plugin_active('elementor/elementor.php')) {
