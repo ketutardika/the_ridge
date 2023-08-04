@@ -4,6 +4,10 @@
 .secondary-menu-wrapper a{
   color: #fff!important;
 }
+
+#navigation a{
+  color: #fff!important;
+}
 #topnav{
 	position: absolute!important;
 }
