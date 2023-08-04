@@ -1,7 +1,9 @@
 .hidden-block{
   display: none!important;
 }
-
+.secondary-menu-wrapper a{
+  color: #fff!important;
+}
 #topnav{
 	position: absolute!important;
 }
