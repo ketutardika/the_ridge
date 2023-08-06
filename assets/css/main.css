@@ -1,3 +1,13 @@
+.hidden-block{
+  display: none!important;
+}
+.secondary-menu-wrapper a{
+  color: #fff!important;
+}
+
+#navigation a{
+  color: #fff!important;
+}
 #topnav{
 	position: absolute!important;
 }
@@ -17,6 +27,9 @@
 }
 .book-table{
 	display: none;
+}
+.custom-logo-link, .secondary-menu-wrapper{
+  display: none!important;
 }
 }
 .toggleContainer {
@@ -151,6 +164,25 @@
   transition: -webkit-transform .4s;
   transition: transform .4s;
   transition: transform .4s, -webkit-transform .4s;
+}
+
+@media (max-width: 991px){
+#topnav {
+    background-color: transparent;
+    box-shadow: none;
+    min-height: unset;
+}
+}
+
+@media screen and (max-width: 768px){
+#navigation {
+    width: 500px;
+    overflow-y: scroll;
+    display: block;
+}
+.custom-logo-link, .secondary-menu-wrapper{
+  display: none!important;
+}
 }
 
 @media screen and (max-width: 480px) {

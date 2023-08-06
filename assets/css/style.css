@@ -114,7 +114,7 @@ h6,
 .display-6 {
   font-size: 32px !important;
   font-weight: normal!important;
-  line-height: 1.65 !important;
+  line-height: 38px !important;
 }
 
 .display-7 {
@@ -1891,12 +1891,12 @@ button:not(:disabled) {
 }
 
 .social-icon.social li a {
-  color: #8890a4;
-  border-color: #8890a4;
+  color: #3D3D3D;
+  border-color: #3D3D3D;
 }
 
 .social-icon.foot-social-icon li a {
-  color: #8890a4;
+  color: #3D3D3D;
   border-color: #232d48;
 }
 
@@ -3038,7 +3038,7 @@ p {
 
 @media (max-width: 991px) {
   #topnav {
-    background-color: transparent;
+    background-color: #ffffff;
     box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
     min-height: 74px;
   }
@@ -5144,7 +5144,7 @@ p {
 
 .footer {
   position: relative;
-  color: #8890a4;
+  color: #3D3D3D;
 }
 
 .footer .footer-py-60 {
@@ -5162,7 +5162,7 @@ p {
 }
 
 .footer .text-foot {
-  color: #8890a4;
+  color: #3D3D3D;
 }
 
 .footer .footer-subscribe .form-control, .footer .foot-subscribe .form-control {
@@ -5177,7 +5177,7 @@ p {
 }
 
 .footer .footer-subscribe input::placeholder, .footer .foot-subscribe input::placeholder {
-  color: #8890a4;
+  color: #3D3D3D;
 }
 
 .footer .footer-subscribe button, .footer .foot-subscribe button {
@@ -5191,7 +5191,7 @@ p {
 }
 
 .footer .footer-subscribe.foot-white .form-control, .footer .foot-subscribe.foot-white .form-control {
-  color: #8890a4;
+  color: #3D3D3D;
 }
 
 .footer .footer-list {
@@ -5246,11 +5246,11 @@ p {
 }
 
 .footer.footer-light .footer-subscribe.foot-white .form-control, .footer.footer-light .foot-subscribe.foot-white .form-control {
-  color: #8890a4;
+  color: #3D3D3D;
 }
 
 .footer.footer-light .footer-subscribe input::placeholder, .footer.footer-light .foot-subscribe input::placeholder {
-  color: #8890a4;
+  color: #3D3D3D;
 }
 
 .footer.footer-light .footer-list li a:hover {

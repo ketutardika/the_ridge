@@ -47,11 +47,35 @@ function the_ridge_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__( 'Primary', 'the_ridge' ),
-		)
-	);
+	//register_nav_menus(
+		//array(
+			//'menu-1' => esc_html__( 'Primary', 'the_ridge' ),
+		//)
+	//);
+
+	// Register custom navigation menus
+	function theme_register_menus() {
+	    register_nav_menus(
+	        array(
+	            'primary-menu' => esc_html__('Primary Menu', 'theme-textdomain'),
+	            'secondary-menu' => esc_html__('Secondary Menu', 'theme-textdomain'),
+	        )
+	    );
+	}
+	add_action('init', 'theme_register_menus');
+
+	// Logo support
+	function theme_custom_logo_setup() {
+	    $defaults = array(
+	        'height'      => 50,
+	        'width'       => 150,
+	        'flex-height' => true,
+	        'flex-width'  => true,
+	        'header-text' => array('site-title', 'site-description'),
+	    );
+	    add_theme_support('custom-logo', $defaults);
+	}
+	add_action('after_setup_theme', 'theme_custom_logo_setup');
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -149,6 +173,9 @@ function the_ridge_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'the_ridge_scripts' );
 
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'blog-post-grid', 416, 550, true ); // Hard Crop Mode
+
 /**
  * Implement the Custom Header feature.
  */
@@ -182,3 +209,38 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+// Add a filter to the body_class
+function add_admin_bar_body_class($classes) {
+    if (is_admin_bar_showing()) {
+        $classes[] = 'admin-bar-showing';
+    }
+    return $classes;
+}
+add_filter('body_class', 'add_admin_bar_body_class');
+
+function add_custom_class_to_secondary_menu_items($classes, $item, $args) {
+    // Check if this menu is the secondary menu
+    if ($args->theme_location === 'secondary-menu') {
+        // Add the custom class to the existing classes
+        $classes[] = 'btn btn-ridge-primary-white display-9 text-white book-table';
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_custom_class_to_secondary_menu_items', 10, 3);
+
+function load_elementor_footer() {
+    // Check if Elementor plugin is active
+    if (class_exists('Elementor\Plugin')) {
+        // Get the footer template ID created in Elementor
+        $footer_template_id = 126; // Replace with your actual footer template ID
+        
+        // Load the Elementor footer content
+        echo "<footer  id='colophon' class='site-footer footer bg-light-yellow-secondary'>";
+        echo \Elementor\Plugin::instance()->frontend->get_builder_content($footer_template_id);
+        echo "</footer'>";
+    }
+}
+
+// Hook the function to where you want to display the footer (e.g., wp_footer)
+add_action('wp_footer', 'load_elementor_footer');

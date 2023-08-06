@@ -34,14 +34,15 @@ function fn() {
 }
 
 function navbarRidge() {
-    $('.nav-trigger').on('click', function(e) {
-        $('body').toggleClass('menu-active');
+   jQuery('.nav-trigger').on('click', function(e) {
+        jQuery('body').toggleClass('menu-active');
     });
 }
 
-$(document).ready(function() {
+jQuery(function ($) {
     navbarRidge();
 });
+
 
 //Menu
 // Toggle menu
